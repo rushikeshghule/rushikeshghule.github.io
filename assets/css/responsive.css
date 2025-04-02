@@ -1,0 +1,288 @@
+/**
+ * Responsive styles for Rushikesh Ghule's portfolio website
+ * 
+ * This file contains all the responsive styling for different
+ * screen sizes to ensure the website is mobile-friendly.
+ * 
+ * @author Rushikesh Ghule
+ * @version 1.0
+ */
+
+/* Laptop (max-width: 1366px) */
+@media (max-width: 1366px) {
+    .container {
+        max-width: 1140px;
+    }
+
+    .hero-content h1 {
+        font-size: 44px;
+    }
+
+    .image-container {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+/* Small Laptop / Large Tablet (max-width: 1200px) */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .image-container {
+        width: 320px;
+        height: 320px;
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skill-categories {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* Tablet (max-width: 992px) */
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+
+    section {
+        padding: 70px 0;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 300px;
+        height: 100%;
+        background-color: var(--bg-color);
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        padding: 80px 20px 0;
+        z-index: 98;
+        transition: var(--transition);
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+    }
+
+    .nav-menu ul li {
+        margin: 0 0 20px 0;
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 99;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 50px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .about-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .info-item {
+        justify-content: center;
+    }
+
+    .timeline::before {
+        left: 30px;
+    }
+
+    .timeline-dot {
+        left: 30px;
+    }
+
+    .timeline-date {
+        position: relative;
+        width: 100%;
+        left: 0;
+        text-align: left;
+        padding-left: 70px;
+        padding-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .timeline-content {
+        margin-left: 0;
+        padding-left: 70px;
+    }
+
+    .education .timeline-item:nth-child(even) .timeline-date {
+        left: 0;
+        right: auto;
+        text-align: left;
+        padding-left: 70px;
+        padding-right: 0;
+    }
+
+    .education .timeline-item:nth-child(even) .timeline-content {
+        margin-right: 0;
+        padding-right: 0;
+        padding-left: 70px;
+        text-align: left;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+/* Mobile Landscape (max-width: 768px) */
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content h2 {
+        font-size: 20px;
+    }
+
+    .image-container {
+        width: 280px;
+        height: 280px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 30px;
+    }
+}
+
+/* Mobile Portrait (max-width: 576px) */
+@media (max-width: 576px) {
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content h2 {
+        font-size: 18px;
+    }
+
+    .image-container {
+        width: 250px;
+        height: 250px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .btn {
+        padding: 10px 24px;
+        font-size: 15px;
+    }
+
+    .project-filters {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-btn {
+        width: 200px;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Extra Small Mobile (max-width: 400px) */
+@media (max-width: 400px) {
+    .image-container {
+        width: 220px;
+        height: 220px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .section-title h2 {
+        font-size: 26px;
+    }
+} 
