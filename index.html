@@ -1,4 +1,4 @@
-ma<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -367,33 +367,18 @@ ma<!DOCTYPE html>
             gap: 30px;
         }
         
-        skill-category {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s;
-    border-top: 5px solid transparent;
-    border-image: var(--gradient-main);
-    border-image-slice: 1;
-    padding: 25px; /* Added padding */
-    margin-bottom: 20px; /* Added margin for better spacing */
-}
-
-.skill-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px; /* Increased gap between skill items */
-    padding: 10px 0; /* Added vertical padding */
-}
-
-.skill-item {
-    background: linear-gradient(135deg, rgba(67, 97, 238, 0.1), rgba(114, 9, 183, 0.1));
-    padding: 12px 20px; /* Increased padding */
-    border-radius: 30px;
-    transition: all 0.3s;
-    border: none;
-}
+        .skill-category {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+            border-top: 5px solid transparent;
+            border-image: var(--gradient-main);
+            border-image-slice: 1;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
         
         .skill-category:hover {
             transform: translateY(-10px);
@@ -408,19 +393,20 @@ ma<!DOCTYPE html>
             margin-bottom: 20px;
         }
         
-/*         .skill-list {
+        .skill-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 15px;
+            padding: 10px 0;
         }
         
         .skill-item {
             background: linear-gradient(135deg, rgba(67, 97, 238, 0.1), rgba(114, 9, 183, 0.1));
-            padding: 10px 18px;
+            padding: 12px 20px;
             border-radius: 30px;
             transition: all 0.3s;
             border: none;
-        } */
+        }
         
         .skill-item:hover {
             background: var(--gradient-main);
@@ -886,12 +872,48 @@ ma<!DOCTYPE html>
         }
         
         @media (max-width: 768px) {
+            .hero {
+                padding-top: 150px;
+                min-height: 100vh;
+            }
+            
+            .hero-content {
+                padding-top: 30px;
+            }
+            
             .hero h1 {
-                font-size: 3rem;
+                font-size: 2.5rem;
+            }
+            
+            .hero h1 span {
+                font-size: 1.2rem;
+                letter-spacing: 5px;
             }
             
             .nav-links {
                 display: none;
+            }
+        }
+        
+        /* Additional fix for very small screens */
+        @media (max-width: 480px) {
+            .hero {
+                padding-top: 170px;
+            }
+            
+            .profile-container {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .profile-image {
+                width: 180px;
+                height: 180px;
+            }
+            
+            .profile-circle-1 {
+                width: 200px;
+                height: 200px;
             }
         }
         
@@ -1062,11 +1084,11 @@ ma<!DOCTYPE html>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home" style="margin-top: 60px;">
+    <section class="hero" id="home"style="margin-top: 80px;">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 style="margin-top: 100px;"><span>FULL STACK DEVELOPER</span><br>RUSHIKESH GHULE</h1>
+                    <h1 ><span>FULL STACK DEVELOPER</span><br>RUSHIKESH GHULE</h1>
                     <h2>Building robust & user-friendly applications</h2>
                     <div class="hero-buttons">
                         <a href="#projects" class="btn">View Projects</a>
