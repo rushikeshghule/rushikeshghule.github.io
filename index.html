@@ -367,16 +367,33 @@ ma<!DOCTYPE html>
             gap: 30px;
         }
         
-        .skill-category {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s;
-            border-top: 5px solid transparent;
-            border-image: var(--gradient-main);
-            border-image-slice: 1;
-        }
+        skill-category {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+    border-top: 5px solid transparent;
+    border-image: var(--gradient-main);
+    border-image-slice: 1;
+    padding: 25px; /* Added padding */
+    margin-bottom: 20px; /* Added margin for better spacing */
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Increased gap between skill items */
+    padding: 10px 0; /* Added vertical padding */
+}
+
+.skill-item {
+    background: linear-gradient(135deg, rgba(67, 97, 238, 0.1), rgba(114, 9, 183, 0.1));
+    padding: 12px 20px; /* Increased padding */
+    border-radius: 30px;
+    transition: all 0.3s;
+    border: none;
+}
         
         .skill-category:hover {
             transform: translateY(-10px);
@@ -391,7 +408,7 @@ ma<!DOCTYPE html>
             margin-bottom: 20px;
         }
         
-        .skill-list {
+/*         .skill-list {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
@@ -403,7 +420,7 @@ ma<!DOCTYPE html>
             border-radius: 30px;
             transition: all 0.3s;
             border: none;
-        }
+        } */
         
         .skill-item:hover {
             background: var(--gradient-main);
