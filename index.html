@@ -638,15 +638,18 @@
         }
         
         .project-full-description {
-            display: none;
-            background-color: #f8f8f8;
-            padding: 15px;
-            margin-top: 15px;
-            border-radius: 6px;
-            border-left: 4px solid transparent;
-            border-image: var(--gradient-accent);
-            border-image-slice: 1;
-        }
+    display: none;
+    background-color: #f8f8f8;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border-left: 4px solid transparent;
+    border-image: var(--gradient-accent);
+    border-image-slice: 1;
+}
+.project-full-description.visible {
+    display: block;
+}
         
         .toggle-details-btn {
             background: var(--gradient-main);
@@ -1676,16 +1679,17 @@
          * @param {HTMLElement} button - The button that was clicked
          */
         function toggleDetails(button) {
-            console.log('Toggle button clicked:', button);
-            var descriptionDiv = button.nextElementSibling;
-            console.log('Description div:', descriptionDiv);
-            if (!descriptionDiv || !descriptionDiv.classList.contains('project-full-description')) {
-                console.error('Description div not found or incorrect element');
-                return;
-            }
-            descriptionDiv.classList.toggle('visible');
-            button.textContent = descriptionDiv.classList.contains('visible') ? 'Hide Details' : 'Show Details';
-        }
+    console.log('Toggle button clicked:', button);
+    const projectCard = button.closest('.project-card');
+    const descriptionDiv = projectCard.querySelector('.project-full-description');
+    console.log('Description div:', descriptionDiv);
+    if (!descriptionDiv) {
+        console.error('Description div not found');
+        return;
+    }
+    descriptionDiv.classList.toggle('visible');
+    button.textContent = descriptionDiv.classList.contains('visible') ? 'Hide Details' : 'Show Details';
+}
     </script>
     <div class="decoration-circle circle-1"></div>
     <div class="decoration-circle circle-2"></div>
