@@ -1676,20 +1676,15 @@
          * @param {HTMLElement} button - The button that was clicked
          */
         function toggleDetails(button) {
-            // Find the description div (next sibling after the button)
+            console.log('Toggle button clicked:', button);
             var descriptionDiv = button.nextElementSibling;
-            
-            // Check if it's currently visible
-            var isVisible = descriptionDiv.style.display === "block";
-            
-            // Toggle visibility
-            if (isVisible) {
-                descriptionDiv.style.display = "none";
-                button.textContent = "Show Details";
-            } else {
-                descriptionDiv.style.display = "block";
-                button.textContent = "Hide Details";
+            console.log('Description div:', descriptionDiv);
+            if (!descriptionDiv || !descriptionDiv.classList.contains('project-full-description')) {
+                console.error('Description div not found or incorrect element');
+                return;
             }
+            descriptionDiv.classList.toggle('visible');
+            button.textContent = descriptionDiv.classList.contains('visible') ? 'Hide Details' : 'Show Details';
         }
     </script>
     <div class="decoration-circle circle-1"></div>
